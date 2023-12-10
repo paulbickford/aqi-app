@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Air Quality Index Location Viewer
+
+Created for New Jersey Office of Innovation by Paul Bickford.
+
+## About
+
+This app retrieves and display the air quality index for four cities, the first of which is set to the users location.
+
+It was written using NextJS and TypeScript with Playwright and Jest used for testing.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+You must have installed:
+
+- Docker (https://www.docker.com/get-started/)
+- Git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- A valid token for aqi.waqi.info.
+- Npm or Yarn (if you want to run in development mode).
+
+### Installation
+
+Clone repo into desired directory.
+
+Navigate into app's root directory, create a file named `.env`, and place the aqi.waqi.info token inside:
+
+```
+AQI_TOKEN=<token>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Production
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Spin up docker instance.
 
-## Learn More
+Open browser to http://localhost:9090.
 
-To learn more about Next.js, take a look at the following resources:
+#### Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the development server, navigate to project root directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm init
+npm run dev
+# or
+yarn
+yarn dev
+```
+Open browser to http://localhost:3000.
 
-## Deploy on Vercel
+## To do
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Make aqi background and text color complimentary.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Create deployment
+    - Load token into environment
+
+- Organize modules
+
+- Style mobile
+- Change Favicon
+
+- Check formatting (indents, semi-colons, last comma, console.logs)
