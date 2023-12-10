@@ -35,7 +35,7 @@ AQI_TOKEN=<token>
 
 Spin up docker instance.
 
-Open browser to http://localhost:9090.
+Open browser to http://localhost:3000.
 
 #### Development
 
@@ -53,13 +53,6 @@ Open browser to http://localhost:3000.
 ## To do
 
 - Make aqi background and text color complimentary.
-
-- Create deployment
-    - Load token into environment
-
-- Organize modules
-
 - Style mobile
 - Change Favicon
-
 - Check formatting (indents, semi-colons, last comma, console.logs)
