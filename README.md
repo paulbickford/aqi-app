@@ -12,8 +12,6 @@ It was written using NextJS and TypeScript with tests in Playwright and Jest.
 
 ### Prerequisites
 
-You must have installed:
-
 - Docker (https://www.docker.com/get-started/)
 - Git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - A valid token for aqi.waqi.info.
@@ -21,10 +19,9 @@ You must have installed:
 
 ### Installation
 
-In the terminal, navigate to the directory which will contain the project directory, clone the project repo, and navigate into it.
+In the terminal, navigate to the directory which will contain the project directory, then clone the project repo, and navigate into it.
 
 ```bash
-cd .../the/containing/directory
 git clone https://github.com/paulbickford/aqi-app.git 
 cd app-aqi
 ```
@@ -41,20 +38,21 @@ NEXT_PUBLIC_AQI_TOKEN=<token>
 From the project's root directory, build and start the app.
 
 ```bash
-cd .../aqi-app
 sudo docker compose up -d
 ```
 Once the docker instance is built and started, open browser to http://localhost:3000.
 
 #### Development
 
-To start the app in development mode, navigate to project root directory, load dependencies, and run.
+To start the app in development mode, navigate to project root directory, then load dependencies, and run.
 
+Npm
 ```bash
-cd ~/.../aqi-app
 npm init
 npm run dev
-# or
+```
+Yarn
+```bash
 yarn
 yarn dev
 ```
