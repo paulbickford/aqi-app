@@ -8,12 +8,8 @@ type AqiDescription = {
     color: string,
 }
 
-// Make environmental variable
-const token = process.env.AQI_TOKEN;
-
+const token = process.env.NEXT_PUBLIC_AQI_TOKEN;
 const aqiUrl = 'https://api.waqi.info/feed/';
-
-
 
 function getAqiDescription(aqiString: string): AqiDescription {
     const aqi = Number(aqiString) || 0;
@@ -83,8 +79,6 @@ export async function getAqiData(prevState: AqiData, location: string) {
             error: false,
         }
     }
-
-    console.log(aqiResponse);
 
     return newState;
 }

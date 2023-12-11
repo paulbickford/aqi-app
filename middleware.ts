@@ -15,12 +15,8 @@ export function middleware(request: NextRequest) {
     }
 
     const response = NextResponse.next();
-
-    // const cookieLocation = request.cookies.get('location');
     response.cookies.set('location', city);
-    // const cookie = request.cookies.get('locationError');
     response.cookies.set('locationError', locationError);
-
 
     return response;
 }
