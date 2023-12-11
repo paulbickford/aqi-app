@@ -9,7 +9,7 @@ export default function AqiDisplay({ aqi, aqiLabel, locationName, locationDescri
 
     return (
         <>
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center">
                 <p className="text-lg">
                     {locationDescription}
                 </p>

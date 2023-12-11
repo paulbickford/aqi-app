@@ -20,13 +20,6 @@ export default function RootLayout({
         <link rel='icon' href='/favicon.ico' sizes='any' />
       </head>
       <body className={inter.className}>
-        <div
-          className='w-full flex flex-row justify-center'
-        >
-          <p className='text-4xl'>
-            Air Quality Index Location Viewer
-          </p>
-        </div>
         {children}
       </body>
     </html>

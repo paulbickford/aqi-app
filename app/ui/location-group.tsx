@@ -9,7 +9,7 @@ export default function LocationGroup({ location, myLocation, onChange }: {
                 <legend className="mb-2 block text-sm font-medium">
                     pick location
                 </legend>
-                <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+                <div className="lg:mb-24 grid text-center lg:max-w-5xl lg:w-full lg:grid-cols-4 lg:text-left">
                     <div className="mb-3 text-2xl font-semibold">
                         <input
                             className="hidden"
@@ -19,7 +19,6 @@ export default function LocationGroup({ location, myLocation, onChange }: {
                             value={myLocation}
                             checked={location === myLocation}
                             onChange={e => onChange(e.target.value)}
-                            aria-describedby='location-error'
                         />
                         <label
                             htmlFor='location-0'
@@ -42,7 +41,6 @@ export default function LocationGroup({ location, myLocation, onChange }: {
                             value='seattle'
                             checked={location === 'seattle'}
                             onChange={e => onChange(e.target.value)}
-                            aria-describedby='location-error'
                         />
                         <label
                             htmlFor='location-1'
@@ -65,7 +63,6 @@ export default function LocationGroup({ location, myLocation, onChange }: {
                             value='paris'
                             checked={location === 'paris'}
                             onChange={e => onChange(e.target.value)}
-                            aria-describedby='location-error'
                         />
                         <label
                             htmlFor={'location-2'}
@@ -88,7 +85,6 @@ export default function LocationGroup({ location, myLocation, onChange }: {
                             value='new-delhi'
                             checked={location === 'new-delhi'}
                             onChange={e => onChange(e.target.value)}
-                            aria-describedby='location-error'
                         />
                         <label
                             htmlFor='location-3'

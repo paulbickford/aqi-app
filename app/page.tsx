@@ -12,7 +12,7 @@ import { capitalize, formatLocation, initialAqiData } from '@/app/lib/utils';
 const locationErrors = {
   geoFailed: 'Your location cannot be determined, please enter your city',
   cityNotFound: 'Cannot find your city, try another',
-}
+};
 
 export default function Home() {
   const [isLoading, setLoading] = useState(false);
@@ -40,7 +40,7 @@ export default function Home() {
     if (aqiData.error) {
       handleLocationError(locationErrors.cityNotFound);
     }
-  })
+  }, []);
 
   const handleLocationChange = (l: string) => {
     updateAqiData(l);
@@ -68,7 +68,12 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 md:p-24">
+      <div className='w-full flex flex-row justify-center'>
+        <p className='text-lg md:text-4xl'>
+          Air Quality Index Location Viewer
+        </p>
+      </div>
       <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
         <AqiDisplay
           aqi={aqiData.aqi}
@@ -98,10 +103,8 @@ export default function Home() {
                       id="my-location"
                       name="my-location"
                       type="text"
-
                       placeholder="Enter city"
                       className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-                      aria-describedby='location-error'
                     />
                   </div>
                 </div>

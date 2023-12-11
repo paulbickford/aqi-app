@@ -4,9 +4,9 @@ Created for New Jersey Office of Innovation by Paul Bickford.
 
 ## About
 
-This app retrieves and display the air quality index for four cities, the first of which is set to the users location.
+This app retrieves and displays the air quality index for four cities, the first of which is set to the user's location.
 
-It was written using NextJS and TypeScript with Playwright and Jest used for testing.
+It was written using NextJS and TypeScript with tests in Playwright and Jest.
 
 ## Getting Started
 
@@ -21,27 +21,37 @@ You must have installed:
 
 ### Installation
 
-Clone repo into desired directory.
+In the terminal, navigate to the directory which will contain the project directory, clone the project repo, and navigate into it.
 
-Navigate into app's root directory, create a file named `.env`, and place the aqi.waqi.info token inside:
+```bash
+cd ~/the/containing/directory
+git clone https://github.com/paulbickford/aqi-app.git 
+cd app-aqi
+```
+
+Ccreate a file named `.env.local` and copy the aqi.waqi.info token inside:
 
 ```
-AQI_TOKEN=<token>
+NEXT_PUBLIC_AQI_TOKEN=<token>
 ```
-
 ### Run
 
 #### Production
 
-Spin up docker instance.
+From the project's root directory, build and start the app.
 
-Open browser to http://localhost:3000.
+```bash
+cd ~/.../aqi-app
+sudo docker compose up -d
+```
+Once the docker instance is built and started, open browser to http://localhost:3000.
 
 #### Development
 
-To run the development server, navigate to project root directory.
+To start the app in development mode, navigate to project root directory.
 
 ```bash
+cd ~/.../aqi-app
 npm init
 npm run dev
 # or
@@ -50,9 +60,15 @@ yarn dev
 ```
 Open browser to http://localhost:3000.
 
-## To do
+To run tests
 
-- Make aqi background and text color complimentary.
-- Style mobile
-- Change Favicon
-- Check formatting (indents, semi-colons, last comma, console.logs)
+```bash
+# Jest tests
+npm testj
+# or
+yarn testj
+# Playwright tests
+npm testpw
+# or
+yarn testpw
+```
