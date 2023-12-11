@@ -42,6 +42,12 @@ sudo docker compose up -d
 ```
 Once the docker instance is built and started, open browser to http://localhost:3000.
 
+To stop app
+
+```bash
+sudo docker compose down
+```
+
 #### Development
 
 To start the app in development mode, navigate to project root directory, then load dependencies, and run.
